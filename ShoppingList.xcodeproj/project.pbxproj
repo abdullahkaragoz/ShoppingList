@@ -14,6 +14,7 @@
 		CCECCC2527D684E200F11563 /* ShoppingList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCECCC2327D684E200F11563 /* ShoppingList.xcdatamodeld */; };
 		CCECCC2727D684E800F11563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCECCC2627D684E800F11563 /* Assets.xcassets */; };
 		CCECCC2A27D684E800F11563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCECCC2827D684E800F11563 /* LaunchScreen.storyboard */; };
+		CCECCC3427D693A500F11563 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECCC3327D693A500F11563 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CCECCC2627D684E800F11563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCECCC2927D684E800F11563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCECCC2B27D684E800F11563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCECCC3327D693A500F11563 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				CCECCC1A27D684E200F11563 /* AppDelegate.swift */,
 				CCECCC1C27D684E200F11563 /* SceneDelegate.swift */,
 				CCECCC1E27D684E200F11563 /* ViewController.swift */,
+				CCECCC3327D693A500F11563 /* DetailsViewController.swift */,
 				CCECCC2027D684E200F11563 /* Main.storyboard */,
 				CCECCC2627D684E800F11563 /* Assets.xcassets */,
 				CCECCC2827D684E800F11563 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				CCECCC2527D684E200F11563 /* ShoppingList.xcdatamodeld in Sources */,
 				CCECCC1B27D684E200F11563 /* AppDelegate.swift in Sources */,
 				CCECCC1D27D684E200F11563 /* SceneDelegate.swift in Sources */,
+				CCECCC3427D693A500F11563 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
