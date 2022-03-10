@@ -48,37 +48,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4mw-qc-wBr">
-                                <rect key="frame" x="0.0" y="102" width="414" height="306"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gorselSecImg" translatesAutoresizingMaskIntoConstraints="NO" id="4mw-qc-wBr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="328"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün İsmi" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zlG-W8-9NU">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün İsmi" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zlG-W8-9NU">
                                 <rect key="frame" x="52" y="451" width="309" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="yCj-O3-cIo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün Fiyatı" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CaY-MG-mZK">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün Fiyatı" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CaY-MG-mZK">
                                 <rect key="frame" x="54" y="504" width="309" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="hTV-TD-5tv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ürün Bedeni" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yvv-E9-sMX">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ürün Bedeni" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yvv-E9-sMX">
                                 <rect key="frame" x="52" y="558" width="309" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="placeholderTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün Bedeni" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAi-p6-lDz">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün Bedeni" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAi-p6-lDz">
                                 <rect key="frame" x="52" y="558" width="309" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-dV-Ak1">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-dV-Ak1">
                                 <rect key="frame" x="162" y="634" width="92" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="6fs-w1-AmU"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Kaydet"/>
                                 <connections>
@@ -89,9 +93,26 @@
                         <viewLayoutGuide key="safeArea" id="Ypu-w8-VjU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4mw-qc-wBr" firstAttribute="top" secondItem="Ypu-w8-VjU" secondAttribute="top" id="7g0-Pt-wsR"/>
-                            <constraint firstItem="4mw-qc-wBr" firstAttribute="leading" secondItem="Ypu-w8-VjU" secondAttribute="leading" id="NVz-8B-bwN"/>
-                            <constraint firstItem="Ypu-w8-VjU" firstAttribute="trailing" secondItem="4mw-qc-wBr" secondAttribute="trailing" id="igC-fb-RaB"/>
+                            <constraint firstItem="MAi-p6-lDz" firstAttribute="top" secondItem="Yvv-E9-sMX" secondAttribute="top" id="5DQ-qE-I6s"/>
+                            <constraint firstItem="CaY-MG-mZK" firstAttribute="centerX" secondItem="sdk-dV-Ak1" secondAttribute="centerX" id="7Ce-Qk-GLH"/>
+                            <constraint firstItem="zlG-W8-9NU" firstAttribute="leading" secondItem="Yvv-E9-sMX" secondAttribute="leading" id="DzM-Qt-Nvv"/>
+                            <constraint firstItem="CaY-MG-mZK" firstAttribute="top" secondItem="zlG-W8-9NU" secondAttribute="bottom" constant="19" id="FgS-UH-3Gt"/>
+                            <constraint firstItem="4mw-qc-wBr" firstAttribute="top" secondItem="Ypu-w8-VjU" secondAttribute="top" id="GrZ-Nf-Pbn"/>
+                            <constraint firstItem="sdk-dV-Ak1" firstAttribute="leading" secondItem="Ypu-w8-VjU" secondAttribute="leading" constant="162" id="H3i-wX-pO9"/>
+                            <constraint firstItem="Yvv-E9-sMX" firstAttribute="leading" secondItem="MAi-p6-lDz" secondAttribute="leading" id="K6u-k2-fSW"/>
+                            <constraint firstItem="Yvv-E9-sMX" firstAttribute="top" secondItem="CaY-MG-mZK" secondAttribute="bottom" constant="20" id="Lj0-RB-XbO"/>
+                            <constraint firstItem="4mw-qc-wBr" firstAttribute="leading" secondItem="Ypu-w8-VjU" secondAttribute="leading" id="Mff-Mq-jPN"/>
+                            <constraint firstItem="zlG-W8-9NU" firstAttribute="leading" secondItem="Ypu-w8-VjU" secondAttribute="leading" constant="52" id="S6d-CE-TJJ"/>
+                            <constraint firstItem="Ypu-w8-VjU" firstAttribute="bottom" secondItem="sdk-dV-Ak1" secondAttribute="bottom" constant="192" id="VIG-U9-M8e"/>
+                            <constraint firstItem="MAi-p6-lDz" firstAttribute="bottom" secondItem="Yvv-E9-sMX" secondAttribute="bottom" id="bUy-kw-4Bw"/>
+                            <constraint firstItem="4mw-qc-wBr" firstAttribute="centerX" secondItem="Rnl-eI-jUj" secondAttribute="centerX" id="e6U-81-q7C"/>
+                            <constraint firstItem="Ypu-w8-VjU" firstAttribute="trailing" secondItem="CaY-MG-mZK" secondAttribute="trailing" constant="51" id="i1Y-6v-d73"/>
+                            <constraint firstItem="zlG-W8-9NU" firstAttribute="trailing" secondItem="Yvv-E9-sMX" secondAttribute="trailing" id="ifi-ZU-NEP"/>
+                            <constraint firstItem="4mw-qc-wBr" firstAttribute="centerX" secondItem="zlG-W8-9NU" secondAttribute="centerX" id="mKJ-f2-MKz"/>
+                            <constraint firstItem="zlG-W8-9NU" firstAttribute="top" secondItem="4mw-qc-wBr" secondAttribute="bottom" constant="35" id="pfV-NM-4QU"/>
+                            <constraint firstItem="MAi-p6-lDz" firstAttribute="trailing" secondItem="Yvv-E9-sMX" secondAttribute="trailing" id="sU4-II-TyQ"/>
+                            <constraint firstItem="sdk-dV-Ak1" firstAttribute="top" secondItem="Yvv-E9-sMX" secondAttribute="bottom" constant="42" id="ytM-of-sJv"/>
+                            <constraint firstItem="CaY-MG-mZK" firstAttribute="leading" secondItem="Ypu-w8-VjU" secondAttribute="leading" constant="54" id="zT2-S2-Kx9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a2X-jR-har"/>
@@ -126,6 +147,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gorselSecImg" width="1000" height="1080"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
