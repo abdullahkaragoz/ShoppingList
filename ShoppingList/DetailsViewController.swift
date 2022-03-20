@@ -69,9 +69,11 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             try context.save()
             print("Kayıt Edildi")
         } catch {
-                print("Kayıt edilirken hata oluştu !")
-            }
+            print("Kayıt edilirken hata oluştu !")
+        }
         
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "veriGirildi"), object: nil)
+        self.navigationController?.popViewController(animated: true)
         
     }
     
