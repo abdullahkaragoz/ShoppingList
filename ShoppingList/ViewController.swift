@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var isimDizisi = [String]()
     var idDizisi = [UUID]()
+    var secilenIsım = ""
+    var secilenUUID: UUID?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,26 +45,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do {
             let sonuclar = try context.fetch(fetchRequest)
             
-            for sonuc in sonuclar as! [NSManagedObject]{
+            if sonuclar.count > 0 {
                 
-                if let isim = sonuc.value(forKey: "isim") as? String {
-                    isimDizisi.append(isim)
+                for sonuc in sonuclar as! [NSManagedObject]{
+                    
+                    if let isim = sonuc.value(forKey: "isim") as? String {
+                        isimDizisi.append(isim)
+                    }
+                    
+                    if let id = sonuc.value(forKey: "id") as? UUID {
+                        idDizisi.append(id)
+                    }
+                    
                 }
-                
-                if let id = sonuc.value(forKey: "id") as? UUID {
-                    idDizisi.append(id)
-                }
-                
+                tableView.reloadData()
             }
-            tableView.reloadData()
-        } catch {
             
+           
+        } catch {
+            print("Hata var !")
         }
         
     }
     
    @objc func eklemeButtonuTiklandi() {
+       secilenIsım = ""
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
+       
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,5 +84,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsVC"{
+            let destinationVC = segue.destination as! DetailsViewController
+            destinationVC.secilenUrunIsmi = secilenIsım
+            destinationVC.secilenUrunUUID =  secilenUUID
+        }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        secilenIsım = isimDizisi[indexPath.row]
+        secilenUUID = idDizisi[indexPath.row]
+        performSegue(withIdentifier: "toDetailsVC", sender: nil)
+    }
+    
 }
 
