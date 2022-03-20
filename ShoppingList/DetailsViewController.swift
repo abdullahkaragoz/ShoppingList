@@ -57,7 +57,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
                    
                }
                catch{
-                   
+                   print("Kayıt getirilirken hata oluştu")
                }
            }
         }
